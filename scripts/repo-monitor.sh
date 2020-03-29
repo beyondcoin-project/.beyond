@@ -71,6 +71,9 @@ cp -f $BEYOND_TMP/.beyond/config/fork.beyond.zone $BEYOND_BIND_CONF/fork.beyond.
 cp -f $BEYOND_TMP/.beyond/config/pool.beyond.zone $BEYOND_BIND_CONF/pool.beyond.zone
 cp -f $BEYOND_TMP/.beyond/config/user.beyond.zone $BEYOND_BIND_CONF/user.beyond.zone
 cp -f $BEYOND_TMP/.beyond/config/node.beyond.zone $BEYOND_BIND_CONF/node.beyond.zone
+cp -f $BEYOND_TMP/.beyond/config/app.beyond.zone $BEYOND_BIND_CONF/app.beyond.zone
+cp -f $BEYOND_TMP/.beyond/config/test.beyond.zone $BEYOND_BIND_CONF/test.beyond.zone
+cp -f $BEYOND_TMP/.beyond/config/www.beyond.zone $BEYOND_BIND_CONF/www.beyond.zone
 echo "[**] Moving named-config to named.conf..."
 cp -f $BEYOND_TMP/.beyond/config/named-config $BEYOND_BIND_CONF/named.conf
 echo "[**] Copying opennic conf..."
@@ -86,6 +89,6 @@ echo ""
 echo "[**] Testing DNS..."
 echo ""
 ping -c 2 google.beyond
-ping -c 2 edu.beyond
+ping -c 2 bynd.beyond
 echo "[**] Update completed successfully."
 sleep 5

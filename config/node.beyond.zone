@@ -5,4 +5,6 @@
 ; beyondnode       IN        A       0.0.0.0 ; beyondnode.node.beyond
 $ORIGIN node.beyond.
 
-; add your domain below here
+bynd-main-dns1     IN        A       52.11.0.47 ;
+bynd-main-dns2     IN        A       18.190.88.101 ;
+bynd-main-dns3     IN        A       3.136.244.216 ;

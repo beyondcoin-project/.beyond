@@ -3,7 +3,7 @@
 ;
 $TTL      604800    ; (1 week)
 beyond.                   IN        SOA      beyond. root.beyond. (
-2019102801          ; serial (timestamp)
+2020032901          ; serial (timestamp)
 604800              ; refresh (1 week)
 86400               ; retry (1 day)
 2419200             ; expire (28 days)
@@ -11,19 +11,19 @@ beyond.                   IN        SOA      beyond. root.beyond. (
 
 beyond.                   IN        NS      ns1.beyond.
 beyond.                   IN        NS      ns2.beyond.
-;beyond.                   IN        NS      ns3.beyond.
+beyond.                   IN        NS      ns3.beyond.
 ;beyond.                   IN        NS      ns4.beyond.
 ;beyond.                   IN        NS      ns5.beyond.
 ;beyond.                   IN        NS      ns6.beyond.
 
 $ORIGIN beyond.
 google                  IN        A       8.8.8.8
-ns1                     IN        A       34.239.23.246
-ns1                     IN        AAAA    fe80::872:9aff:fe3c:e1e9
-ns2                     IN        A       34.233.38.119
-ns2                     IN        AAAA    fe80::8f7:b9ff:fecd:ac19
-;ns3                     IN        A       
-;ns3                     IN        AAAA    
+ns1                     IN        A       3.81.209.88
+ns1                     IN        AAAA    fe80::c55:e6ff:fe85:5c05
+ns2                     IN        A       54.208.13.172
+ns2                     IN        AAAA    fe80::ccd:a9ff:fed9:a481
+ns3                     IN        A       54.175.30.22
+ns3                     IN        AAAA    fe80::c5e:42ff:fe19:b17
 ;ns4                     IN        A       
 ;ns4                     IN        AAAA    
 ;ns5                     IN        A       
@@ -32,8 +32,8 @@ ns2                     IN        AAAA    fe80::8f7:b9ff:fecd:ac19
 ;ns6                     IN        AAAA    
 
 ; redirector for HTTP redirect service
-redirect                IN        A       54.160.152.93
-_redirect.redirect      IN        TXT     "redirect=301;url=https://byndnic.com"
+redirect                IN        A       18.215.237.115
+_redirect.redirect      IN        TXT     "redirect=301;url=http://byndnic.com"
 
 ; delegated zones
 beyondpay               IN        NS      ns1.hostmanager.org. ; Issue #4
@@ -50,6 +50,7 @@ shop                    IN        A       34.230.5.15
 extra                   IN        A       54.157.251.114 ;
 wallet                  IN        A       18.190.151.10 ;
 bynd                    IN        CNAME   beyondcoin.io. ;
+addrgen                 IN        CNAME   beyondaddress.org ;
 
 explorer                IN        CNAME   redirect.beyond.
 _redirect.explorer      IN        TXT     "redirect=301;url=https://beyondcoinexplorer.com"
@@ -63,6 +64,12 @@ _redirect.docs          IN        TXT     "redirect=301;url=https://docs.beyondc
 wiki                    IN        CNAME   redirect.beyond.
 _redirect.wiki          IN        TXT     "redirect=301;url=http://wiki.beyondcoin.io"
 
+forum                   IN        CNAME   redirect.beyond.
+_redirect.forum         IN        TXT     "redirect=301;url=https://beyondcoinforums.com"
+
+api                     IN        CNAME   redirect.beyond.
+_redirect.api           IN        TXT     "redirect=301;url=https://api.beyondcoin.io"
+
 ; communities
 $INCLUDE /etc/bind/dev.beyond.zone     ; developers
 $INCLUDE /etc/bind/user.beyond.zone    ; user pages
@@ -70,3 +77,11 @@ $INCLUDE /etc/bind/pool.beyond.zone    ; mining pools
 $INCLUDE /etc/bind/fork.beyond.zone    ; beyondcoin forks
 $INCLUDE /etc/bind/bot.beyond.zone     ; bot domains
 $INCLUDE /etc/bind/node.beyond.zone    ; public nodes
+$INCLUDE /etc/bind/app.beyond.zone     ; public apps
+$INCLUDE /etc/bind/test.beyond.zone    ; public test
+$INCLUDE /etc/bind/www.beyond.zone     ; public sites
+
+; registered
+altmarkets              IN        CNAME   altmarkets.io ;
+mincoin                 IN        CNAME   mincoin.us ;
+quebecoin               IN        CNAME   quebecoin.ca ;

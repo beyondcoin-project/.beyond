@@ -36,6 +36,9 @@ curl https://raw.githubusercontent.com/beyondcoin-project/.beyond/master/config/
 curl https://raw.githubusercontent.com/beyondcoin-project/.beyond/master/config/pool.beyond.zone > /etc/bind/pool.beyond.zone
 curl https://raw.githubusercontent.com/beyondcoin-project/.beyond/master/config/user.beyond.zone > /etc/bind/user.beyond.zone
 curl https://raw.githubusercontent.com/beyondcoin-project/.beyond/master/config/node.beyond.zone > /etc/bind/node.beyond.zone
+curl https://raw.githubusercontent.com/beyondcoin-project/.beyond/master/config/app.beyond.zone > /etc/bind/app.beyond.zone
+curl https://raw.githubusercontent.com/beyondcoin-project/.beyond/master/config/test.beyond.zone > /etc/bind/test.beyond.zone
+curl https://raw.githubusercontent.com/beyondcoin-project/.beyond/master/config/www.beyond.zone > /etc/bind/www.beyond.zone
 
 ## Copy named.conf.opennic from github.
 curl https://raw.githubusercontent.com/beyondcoin-project/.beyond/master/config/named.conf.opennic > /etc/bind/named.conf.opennic
@@ -75,7 +78,7 @@ sed -i '1inameserver 127.0.0.1' /etc/resolv.conf
 echo ""
 echo "[**] Testing DNS..."
 echo ""
-ping -c 4 edu.beyond
+ping -c 4 bynd.beyond
 echo ""
 ping -c 4 google.beyond
 echo ""
