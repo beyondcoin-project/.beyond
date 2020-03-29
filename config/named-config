@@ -1,0 +1,34 @@
+
+include "/etc/bind/named.conf.opennic";
+include "/etc/bind/named.conf.options";
+
+zone "localhost" {
+        type master;
+        file "/etc/bind/db.local";
+};
+
+zone "127.in-addr.arpa" {
+        type master;
+        file "/etc/bind/db.127";
+};
+
+zone "0.in-addr.arpa" {
+        type master;
+        file "/etc/bind/db.0";
+};
+
+zone "255.in-addr.arpa" {
+        type master;
+        file "/etc/bind/db.255";
+};
+
+zone "beyond" {
+        type master;
+        file "/etc/bind/beyond.zone";
+        allow-transfer { any; };
+        allow-query { any; };
+};
+
+logging {
+        category default { null; };
+};

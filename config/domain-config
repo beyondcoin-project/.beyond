@@ -1,0 +1,70 @@
+;
+; BIND data file for TLD ".beyond"
+;
+$TTL      604800    ; (1 week)
+beyond.                   IN        SOA      beyond. root.beyond. (
+2019102801          ; serial (timestamp)
+604800              ; refresh (1 week)
+86400               ; retry (1 day)
+2419200             ; expire (28 days)
+604800 )            ; minimum (1 week)
+
+beyond.                   IN        NS      ns1.beyond.
+beyond.                   IN        NS      ns2.beyond.
+beyond.                   IN        NS      ns3.beyond.
+beyond.                   IN        NS      ns4.beyond.
+beyond.                   IN        NS      ns5.beyond.
+beyond.                   IN        NS      ns6.beyond.
+
+$ORIGIN beyond.
+google                  IN        A       8.8.8.8
+ns1                     IN        A       142.93.1.231
+ns2                     IN        A       104.248.57.4
+ns3                     IN        A       157.245.161.252
+ns3                     IN        AAAA    2604:a880:2:d1::cd:4001
+ns4                     IN        A       206.189.155.220
+ns4                     IN        AAAA    2400:6180:0:d1::8aa:d001
+ns5                     IN        A       82.196.13.99
+ns5                     IN        AAAA    2a03:b0c0:0:1010::b:b001
+ns6                     IN        A       192.34.59.80
+ns6                     IN        AAAA    2604:a880:400:d0::25:c001
+
+; redirector for HTTP redirect service
+redirect                IN        A       142.93.250.51
+_redirect.redirect      IN        TXT     "redirect=301;url=https://byndnic.com"
+
+; delegated zones
+beyondpay               IN        NS      ns1.hostmanager.org. ; Issue #4
+beyondpay               IN        NS      ns2.hostmanager.org. ; Issue #4
+beyondpay               IN        NS      ns3.hostmanager.org. ; Issue #4
+beyondpay               IN        NS      ns4.hostmanager.org. ; Issue #4
+pay                     IN        NS      ns1.hostmanager.org. ; Issue #4
+pay                     IN        NS      ns2.hostmanager.org. ; Issue #4
+pay                     IN        NS      ns3.hostmanager.org. ; Issue #4
+pay                     IN        NS      ns4.hostmanager.org. ; Issue #4
+
+; domain(s)
+edu                     IN        A       188.166.7.218
+extra                   IN        A       68.183.53.229 ; Issue #6
+mediatao                IN        A       62.210.137.119 ; Issue #9
+bynd                    IN        CNAME   beyondcoin.io. ; Issue #23
+
+explorer                IN        CNAME   redirect.beyond.
+_redirect.explorer      IN        TXT     "redirect=301;url=https://beyondcoinexplorer.com"
+
+beyondcoin              IN        CNAME   redirect.beyond.
+_redirect.beyondcoin    IN        TXT     "redirect=301;url=https://beyondcoin.io"
+
+docs                    IN        CNAME   redirect.beyond.
+_redirect.docs          IN        TXT     "redirect=301;url=https://docs.beyondcoin.io"
+
+wiki                    IN        CNAME   redirect.beyond.
+_redirect.wiki          IN        TXT     "redirect=301;url=http://wiki.beyondcoin.io"
+
+; communities
+$INCLUDE /etc/bind/dev.beyond.zone     ; developers
+$INCLUDE /etc/bind/user.beyond.zone    ; user pages
+$INCLUDE /etc/bind/pool.beyond.zone    ; mining pools
+$INCLUDE /etc/bind/fork.beyond.zone    ; beyondcoin forks
+$INCLUDE /etc/bind/bot.beyond.zone     ; bot domains
+$INCLUDE /etc/bind/node.beyond.zone    ; public nodes

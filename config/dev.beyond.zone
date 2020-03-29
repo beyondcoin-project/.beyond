@@ -1,0 +1,12 @@
+; This is where you add a new domain
+; Copy line 5, and paste it with your site's info at the bottom of this file.
+; Don't forget to remove the semicolon at the beginning of your line.
+; 
+; example       IN        A       0.0.0.0 ; example.dev.beyond
+$ORIGIN dev.beyond.
+
+tech                   IN        CNAME   redirect.beyond. ;
+_redirect.tech         IN        TXT     "redirect=301;url=https://github.com/tech1k"
+
+tech1k                 IN        CNAME   redirect.beyond. ;
+_redirect.tech1k       IN        TXT     "redirect=301;url=https://github.com/tech1k"
