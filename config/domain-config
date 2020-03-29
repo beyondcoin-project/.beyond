@@ -52,6 +52,10 @@ wallet                  IN        A       18.190.151.10 ;
 bynd                    IN        CNAME   beyondcoin.io. ;
 addrgen                 IN        CNAME   beyondaddress.org ;
 
+altmarkets              IN        CNAME   altmarkets.io ;
+mincoin                 IN        CNAME   mincoin.us ;
+quebecoin               IN        CNAME   quebecoin.ca ;
+
 explorer                IN        CNAME   redirect.beyond.
 _redirect.explorer      IN        TXT     "redirect=301;url=https://beyondcoinexplorer.com"
 
@@ -77,11 +81,3 @@ $INCLUDE /etc/bind/pool.beyond.zone    ; mining pools
 $INCLUDE /etc/bind/fork.beyond.zone    ; beyondcoin forks
 $INCLUDE /etc/bind/bot.beyond.zone     ; bot domains
 $INCLUDE /etc/bind/node.beyond.zone    ; public nodes
-$INCLUDE /etc/bind/app.beyond.zone     ; public apps
-$INCLUDE /etc/bind/test.beyond.zone    ; public test
-$INCLUDE /etc/bind/www.beyond.zone     ; public sites
-
-; registered
-altmarkets              IN        CNAME   altmarkets.io ;
-mincoin                 IN        CNAME   mincoin.us ;
-quebecoin               IN        CNAME   quebecoin.ca ;
