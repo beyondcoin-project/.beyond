@@ -1,8 +1,8 @@
-![image](https://user-images.githubusercontent.com/34389545/56409412-8f1c4600-623e-11e9-961b-ed57382df370.png)
+![image](https://cdn.beyondcoin.io/images/common/dot-beyond.png)
 
 # Domain system for .beyond TLD
-![image](https://img.shields.io/discord/632746978740011009.svg?label=BYND%20Discord%20&style=popout-square)  
-Join us on [Discord](http://chat.turtlecoin.lol)
+<!--![image](https://img.shields.io/discord/632746978740011009.svg?label=BYND%20Discord%20&style=popout-square)  -->
+Join us on [Discord](http://chat.beyondcoin.io)
 
 This repo holds the DNS config for Bind9 serving the .beyond TLD. New domains should follow the format in the config.
 
