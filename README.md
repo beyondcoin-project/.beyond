@@ -7,7 +7,7 @@ Join us on [Discord](http://chat.beyondcoin.io)
 This repo holds the DNS config for Bind9 serving the .beyond TLD. New domains should follow the format in the config.
 
 # Applying for a domain
-[Fill out the form here](https://github.com/turtlecoin/.beyond/issues/new?assignees=&labels=REQUEST&template=-beyond-tld-domain-application.md&title=%5BREQUEST%5D+YourDomainHere.beyond) to apply for a domain.
+[Fill out the form here](https://github.com/beyondcoin-project/.beyond/issues/new?assignees=&labels=REQUEST&template=-beyond-tld-domain-application.md&title=%5BREQUEST%5D+YourDomainHere.beyond) to apply for a domain.
 
 # What to do after creating your application
 Domains are added by pull-request only when the associated application has been approved. All pull requests for adding a domain require a link to an approved application.
