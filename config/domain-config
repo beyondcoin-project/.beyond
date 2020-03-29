@@ -18,8 +18,8 @@ beyond.                   IN        NS      ns6.beyond.
 
 $ORIGIN beyond.
 google                  IN        A       8.8.8.8
-ns1                     IN        A       142.93.1.231
-ns2                     IN        A       104.248.57.4
+ns1                     IN        A       34.239.23.246
+ns2                     IN        A       34.233.38.119
 ns3                     IN        A       157.245.161.252
 ns3                     IN        AAAA    2604:a880:2:d1::cd:4001
 ns4                     IN        A       206.189.155.220

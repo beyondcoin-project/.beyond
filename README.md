@@ -32,12 +32,12 @@ beyond.      IN        NS       ns2.beyond.
 
 $ORIGIN beyond.
 google    IN        A        8.8.8.8
-ns1       IN        A       142.93.1.231
-ns2       IN        A       104.248.57.4
+ns1       IN        A        34.239.23.246
+ns2       IN        A        34.233.38.119
 
 ; testing domain
-edu       IN        A        188.166.7.218
-extra     IN        A        142.93.21.48
+bynd      IN        CNAME    beyondcoin.io
+extra     IN        A        34.239.23.246
 ```
 
 # Domain Guidelines
