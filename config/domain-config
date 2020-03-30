@@ -12,9 +12,13 @@ beyond.                   IN        SOA      beyond. root.beyond. (
 beyond.                   IN        NS      ns1.beyond.
 beyond.                   IN        NS      ns2.beyond.
 beyond.                   IN        NS      ns3.beyond.
-;beyond.                   IN        NS      ns4.beyond.
-;beyond.                   IN        NS      ns5.beyond.
+beyond.                   IN        NS      ns4.beyond.
+beyond.                   IN        NS      ns5.beyond.
 ;beyond.                   IN        NS      ns6.beyond.
+;beyond.                   IN        NS      ns7.beyond.
+;beyond.                   IN        NS      ns8.beyond.
+;beyond.                   IN        NS      ns8.beyond.
+;beyond.                   IN        NS      ns10.beyond.
 
 $ORIGIN beyond.
 google                  IN        A       8.8.8.8
@@ -24,43 +28,62 @@ ns2                     IN        A       54.208.13.172
 ns2                     IN        AAAA    fe80::ccd:a9ff:fed9:a481
 ns3                     IN        A       54.175.30.22
 ns3                     IN        AAAA    fe80::c5e:42ff:fe19:b17
-;ns4                     IN        A       
+ns4                     IN        A       3.82.14.164
 ;ns4                     IN        AAAA    
-;ns5                     IN        A       
+ns5                     IN        A       18.215.253.122
 ;ns5                     IN        AAAA    
 ;ns6                     IN        A       
 ;ns6                     IN        AAAA    
+;ns7                     IN        A       
+;ns7                     IN        AAAA    
+;ns8                     IN        A       
+;ns8                     IN        AAAA    
+;ns9                     IN        A       
+;ns9                     IN        AAAA    
+;ns10                    IN        A       
+;ns10                    IN        AAAA    
 
 ; redirector for HTTP redirect service
 redirect                IN        A       18.215.237.115
 _redirect.redirect      IN        TXT     "redirect=301;url=http://byndnic.com"
 
 ; delegated zones
-beyondpay               IN        NS      ns1.hostmanager.org. ; Issue #4
-beyondpay               IN        NS      ns2.hostmanager.org. ; Issue #4
-beyondpay               IN        NS      ns3.hostmanager.org. ; Issue #4
-beyondpay               IN        NS      ns4.hostmanager.org. ; Issue #4
-pay                     IN        NS      ns1.hostmanager.org. ; Issue #4
-pay                     IN        NS      ns2.hostmanager.org. ; Issue #4
-pay                     IN        NS      ns3.hostmanager.org. ; Issue #4
-pay                     IN        NS      ns4.hostmanager.org. ; Issue #4
+beyondpay               IN        NS      ns1.beyondcoin.io. ;
+beyondpay               IN        NS      ns2.beyondcoin.io. ;
+beyondpay               IN        NS      ns3.beyondcoin.io. ;
+beyondpay               IN        NS      ns4.beyondcoin.io. ;
+beyondpay               IN        NS      ns5.beyondcoin.io. ;
+pay                     IN        NS      ns1.beyondcoin.io. ;
+pay                     IN        NS      ns2.beyondcoin.io. ;
+pay                     IN        NS      ns3.beyondcoin.io. ;
+pay                     IN        NS      ns4.beyondcoin.io. ;
+pay                     IN        NS      ns5.beyondcoin.io. ;
+pay001                  IN        NS      ns1.beyondcoin.io. ;
+pay002                  IN        NS      ns2.beyondcoin.io. ;
+pay003                  IN        NS      ns3.beyondcoin.io. ;
+pay004                  IN        NS      ns4.beyondcoin.io. ;
+pay005                  IN        NS      ns5.beyondcoin.io. ;
 
 ; domain(s)
 shop                    IN        A       34.230.5.15
 extra                   IN        A       54.157.251.114 ;
 wallet                  IN        A       18.190.151.10 ;
+beyondcoin              IN        CNAME   beyondcoin.io. ;
 bynd                    IN        CNAME   beyondcoin.io. ;
-addrgen                 IN        CNAME   beyondaddress.org ;
+addrgen                 IN        CNAME   beyondaddress.org. ;
+explorer                IN        CNAME   beyondcoinexplorer.com. ;
+forum                   IN        CNAME   beyondcoinforum.com. ;
 
-altmarkets              IN        CNAME   altmarkets.io ;
-mincoin                 IN        CNAME   mincoin.us ;
-quebecoin               IN        CNAME   quebecoin.ca ;
+altmarkets              IN        CNAME   altmarkets.io. ;
+mincoin                 IN        CNAME   mincoin.us. ;
+quebecoin               IN        CNAME   quebecoin.ca. ;
+turtlecoin              IN        CNAME   turtlecoin.lol ;
 
-explorer                IN        CNAME   redirect.beyond.
-_redirect.explorer      IN        TXT     "redirect=301;url=https://beyondcoinexplorer.com"
+;explorer                IN        CNAME   redirect.beyond.
+;_redirect.explorer      IN        TXT     "redirect=301;url=https://beyondcoinexplorer.com"
 
-beyondcoin              IN        CNAME   redirect.beyond.
-_redirect.beyondcoin    IN        TXT     "redirect=301;url=https://beyondcoin.io"
+;beyondcoin              IN        CNAME   redirect.beyond.
+;_redirect.beyondcoin    IN        TXT     "redirect=301;url=https://beyondcoin.io"
 
 docs                    IN        CNAME   redirect.beyond.
 _redirect.docs          IN        TXT     "redirect=301;url=https://docs.beyondcoin.io"
