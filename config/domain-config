@@ -29,9 +29,9 @@ ns2                     IN        AAAA    fe80::ccd:a9ff:fed9:a481
 ns3                     IN        A       54.175.30.22
 ns3                     IN        AAAA    fe80::c5e:42ff:fe19:b17
 ns4                     IN        A       3.82.14.164
-;ns4                     IN        AAAA    
+ns4                     IN        AAAA    fe80::ce9:d7ff:fe82:d957
 ns5                     IN        A       18.215.253.122
-;ns5                     IN        AAAA    
+ns5                     IN        AAAA    fe80::c3b:7ff:feb4:9bf
 ;ns6                     IN        A       
 ;ns6                     IN        AAAA    
 ;ns7                     IN        A       
@@ -77,7 +77,7 @@ forum                   IN        CNAME   beyondcoinforum.com. ;
 altmarkets              IN        CNAME   altmarkets.io. ;
 mincoin                 IN        CNAME   mincoin.us. ;
 quebecoin               IN        CNAME   quebecoin.ca. ;
-turtlecoin              IN        CNAME   turtlecoin.lol ;
+turtlecoin              IN        CNAME   turtlecoin.lol. ;
 
 ;explorer                IN        CNAME   redirect.beyond.
 ;_redirect.explorer      IN        TXT     "redirect=301;url=https://beyondcoinexplorer.com"
