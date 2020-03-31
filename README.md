@@ -2,7 +2,7 @@
 
 # Domain system for .beyond TLD
 <!--![image](https://img.shields.io/discord/632746978740011009.svg?label=BYND%20Discord%20&style=popout-square)  -->
-Join us on [Discord](http://chat.beyondcoin.io)
+Join us on [Discord](https://chat.beyondcoin.io)
 
 This repo holds the DNS config for Bind9 serving the .beyond TLD. New domains should follow the format in the config.
 
