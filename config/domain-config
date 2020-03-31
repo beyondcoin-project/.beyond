@@ -81,11 +81,15 @@ bynd                    IN        CNAME   beyondcoin.io. ;
 addrgen                 IN        CNAME   beyondaddress.org. ;
 explorer                IN        CNAME   beyondcoinexplorer.com. ;
 forum                   IN        CNAME   beyondcoinforum.com. ;
+donate                  IN        CNAME   donate.beyondcoin.io. ;
+faucet                  IN        CNAME   beyondfaucet.com. ;
+blockhalf               IN        CNAME   beyondcoinblockhalf.com. ;
+byndwallet.beyond       IN        CNAME   byndwallet.com. ;
 
-altmarkets              IN        CNAME   altmarkets.io. ;
-mincoin                 IN        CNAME   mincoin.us. ;
-quebecoin               IN        CNAME   quebecoin.ca. ;
-turtlecoin              IN        CNAME   turtlecoin.lol. ;
+altmarkets              IN        CNAME   34.233.38.119 ;
+mincoin                 IN        A       34.233.38.119 ;
+quebecoin               IN        CNAME   34.233.38.119 ;
+turtlecoin              IN        CNAME   34.233.38.119 ;
 
 ;explorer                IN        CNAME   redirect.beyond.
 ;_redirect.explorer      IN        TXT     "redirect=301;url=https://beyondcoinexplorer.com"
