@@ -47,6 +47,14 @@ ns5                     IN        AAAA    fe80::c3b:7ff:feb4:9bf
 redirect                IN        A       18.215.237.115
 _redirect.redirect      IN        TXT     "redirect=301;url=http://byndnic.com"
 
+; DNS servers
+dns                     IN        CNAME   dns.byndnic.com. ;
+dns1                    IN        CNAME   dns1.byndnic.com. ;
+dns2                    IN        CNAME   dns2.byndnic.com. ;
+dns3                    IN        CNAME   dns3.byndnic.com. ;
+dns4                    IN        CNAME   dns4.byndnic.com. ;
+dns5                    IN        CNAME   dns5.byndnic.com. ;
+
 ; delegated zones
 beyondpay               IN        NS      ns1.beyondcoin.io. ;
 beyondpay               IN        NS      ns2.beyondcoin.io. ;
