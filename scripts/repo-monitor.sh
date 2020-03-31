@@ -92,6 +92,6 @@ echo ""
 echo "[**] Testing DNS..."
 echo ""
 ping -c 2 google.beyond
-ping -c 2 bynd.beyond
+#ping -c 2 bynd.beyond
 echo "[**] Update completed successfully."
 sleep 5

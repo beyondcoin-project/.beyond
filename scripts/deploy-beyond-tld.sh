@@ -78,7 +78,7 @@ sed -i '1inameserver 127.0.0.1' /etc/resolv.conf
 echo ""
 echo "[**] Testing DNS..."
 echo ""
-ping -c 4 bynd.beyond
+#ping -c 4 bynd.beyond
 echo ""
 ping -c 4 google.beyond
 echo ""
