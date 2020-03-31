@@ -1,0 +1,8 @@
+; This is where you add a new domain
+; Copy line 5, and paste it with your site's info at the bottom of this file.
+; Don't forget to remove the semicolon at the beginning of your line.
+; 
+; example       IN        A       0.0.0.0 ; example.www.beyond
+$ORIGIN www.beyond.
+
+; add your domain below here
